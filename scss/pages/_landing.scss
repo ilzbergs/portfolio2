@@ -1,0 +1,126 @@
+//menu
+
+header {
+  background-image: url('template/images/header-image.jpg');
+  height: 660px;
+  width: 100%;
+  min-width: 375px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .menu-row {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 62px;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin: 20px 35px;
+  }
+
+  nav {
+    a {
+      display: none;
+    }
+  }
+
+  .logo-bars {
+    background-image: url('template/images/bars.svg');
+    width: 20px;
+    height: 25px;
+    background-size: cover;
+    margin: 20px 35px;
+    z-index: 1;
+    display: block;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: (black);
+    z-index: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 660px;
+    opacity: 0.4;
+    min-width: 375px;
+  }
+  .intro-header {
+    .wrapper {
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      text-align: center;
+      margin-top: 100px;
+      padding: 25px;
+      height: 288px;
+
+      h1 {
+        font-weight: 500;
+        font-size: 42px;
+        color: white;
+        line-height: 55px;
+      }
+      p {
+        color: white;
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 400;
+      }
+      //button
+      button {
+        background-color: $headerBtnColor;
+        width: 170px;
+        height: 55px;
+        border-radius: 5px;
+        border: none;
+        margin-top: 40px;    
+      }
+      a {
+        color:white;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+//main
+main {
+  .container {
+    background-color: white;
+    margin: 0 24px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
+    top: 600px;
+    position: absolute;
+    min-width: 120px;
+  }
+  .text-block {
+    text-align: center;
+    margin-top: 50px;
+
+    h4 {
+      font-weight: 400;
+      color: rgba(60, 72, 88, 1);
+      font-size: 24px;
+      padding: 0 40px;
+      line-height: 28px;
+      word-wrap: break-word;
+    }
+    p {
+      color: rgba(153, 153, 153, 1);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      padding-top: 20px;
+    }
+  }
+}
