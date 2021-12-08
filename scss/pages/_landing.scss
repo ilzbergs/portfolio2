@@ -4,9 +4,10 @@ header {
   background-image: url('template/images/header-image.jpg');
   height: 660px;
   width: 100%;
-  min-width: 375px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  min-width: 350px;
 
   .menu-row {
     display: flex;
@@ -37,6 +38,7 @@ header {
     margin: 20px 35px;
     z-index: 1;
     display: block;
+    cursor: pointer;
   }
 
   &::after {
@@ -50,7 +52,7 @@ header {
     width: 100%;
     height: 660px;
     opacity: 0.4;
-    min-width: 375px;
+    min-width: 350px;
   }
   .intro-header {
     .wrapper {
@@ -81,18 +83,30 @@ header {
         height: 55px;
         border-radius: 5px;
         border: none;
-        margin-top: 40px;    
+        margin-top: 40px;
+        cursor: pointer;
+      }
+      a::before {
+        content: '';
+        display: inline-flex;
+        background-image: url('template/images/grip-horizontal.svg');
+        background-size: 14px 18px;
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
       }
       a {
-        color:white;
+        color: white;
         font-size: 14px;
         font-weight: 400;
         text-transform: uppercase;
+        margin: 0;
+       
       }
     }
   }
 }
-//main
+//text-block
 main {
   .container {
     background-color: white;
@@ -101,7 +115,6 @@ main {
     filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
     top: 600px;
     position: absolute;
-    min-width: 120px;
   }
   .text-block {
     text-align: center;
@@ -109,18 +122,64 @@ main {
 
     h4 {
       font-weight: 400;
-      color: rgba(60, 72, 88, 1);
+      color: $greyColor;
       font-size: 24px;
       padding: 0 40px;
       line-height: 28px;
-      word-wrap: break-word;
     }
     p {
-      color: rgba(153, 153, 153, 1);
+      color: $lightGrey;
       font-weight: 300;
       font-size: 16px;
       line-height: 18px;
       padding-top: 20px;
+      margin: 0 10px;
     }
   }
 }
+
+// What I have learn?
+.par-name {
+ color: $greyColor;
+ font-size: 24px;
+ text-align: center;
+ line-height: 18px;
+ padding: 0px 98px;
+ margin-top: 50px;
+ margin-bottom: 20px;
+}
+
+.paragraph {
+  
+  .options{
+    padding:0 12px;
+    text-align: center;
+    height: 200px;
+    font-weight: 400;
+
+   .par-logo{
+      background-color: hotpink;
+      width: 50px;
+      height: 70px;
+      margin-bottom: 30px;
+      display: inline-flex;
+     align-items: center;
+     justify-content: center;
+    }
+    .par-head{
+       h4{
+        color: $greyColor;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 18px;
+      }
+      p{
+        color:$lightGrey;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    } 
+    }
+  }
+
+
