@@ -1,0 +1,49 @@
+.contact {
+  background-color: $magenta;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-width: 350px;
+
+  .menu-row {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 62px;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      margin: 20px 35px;
+      color: white;
+    }
+    .name {
+      font-size: 18px;
+      font-weight: 300;
+      z-index: 1;
+    }
+    nav {
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        z-index: 1;
+        color: white;
+        display: none;
+      }
+    }
+  }
+  .logo-bars {
+    background-image: url('template/images/bars.svg');
+    width: 20px;
+    height: 25px;
+    background-size: cover;
+    margin: 20px 35px;
+    z-index: 1;
+    display: block;
+    cursor: pointer;
+  }
+}

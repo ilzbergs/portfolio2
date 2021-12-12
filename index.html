@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $("#nav-bar").load("parts/nav-bar.html");
+            $("#footer").load("parts/footer.html");
+        });
+    </script>
     <meta name="author" content="Toms Ilzbergs">
     <meta name="description" content="My first Portfolio, which I made as project for webskola.lv">
     <meta name="keywords" content="portfolio, webskola,project">
@@ -16,26 +25,16 @@
 </head>
 
 <body>
-    <header>
-        <div class="menu-row">
-            <a href="">Toms Ilzbergs</a>
-            <nav>
-                <a href="">Darbu saraksts</a>
-                <a href=""><span></span> Mans cv</a>
-                <a href="" class="facebook">fb</a>
-                <a href="" class="twitter">tw</a>
-                <a href="" class="github">git</a>
-            </nav>
-            <div class="logo-bars"></div>
-        </div>
+    <header class="landing">
+        <div id="nav-bar"></div> 
         <div class="intro-header">
             <div class="wrapper">
                 <h1>Write the best title for your page</h1>
                 <p>Every landing page needs a small description after the big bold title,
                     that's why we added this text here. Add here all the information
                     that can make you or your product create the first impression.</p>
-                <button><a href="">Mani darbi</a></button>
-            </div>
+                <div class="btn"><a href="portfolio.html">Mani darbi</a></div>
+               
 
     </header>
     <main>
@@ -57,37 +56,109 @@
             </div>
             <div class="paragraph">
                 <div class="options">
-                    <div class="par-logo">c</div>
+                    <div class="par-logo"></div>
                     <div class="par-head">
-                        <h4>HTML Struktūra</h4>
+                        <h5>HTML Struktūra</h5>
                         <p>Divide details about your product or agency work into parts. Write a few lines about each
                             one. A paragraph describing a feature will be enough.</p>
                     </div>
                 </div>
                 <div class="options">
-                    <div class="par-logo">c</div>
+                    <div class="par-logo1"></div>
                     <div class="par-head">
-                        <h4>CSS Stilizēšana</h4>
+                        <h5>CSS Stilizēšana</h5>
                         <p>Divide details about your product or agency work into parts. Write a few lines about each
                             one. A paragraph describing a feature will be enough.</p>
                     </div>
                 </div>
                 <div class="options">
-                    <div class="par-logo">bn</div>
+                    <div class="par-logo2"></div>
                     <div class="par-head">
-                        <h4>JavaScript programmēšana</h4>
+                        <h5>JavaScript programmēšana</h5>
                         <p>Divide details about your product or agency work into parts. Write a few lines about each
                             one. A paragraph describing a feature will be enough.</p>
                     </div>
                 </div>
             </div>
+            <div class="job-container">
+               <div class="my-jobs">
+                <h4>Mani darbi</h4>
+            </div>
+            <div class="row">
+                <div class="job-block">
+                    <div class="job">
+                        <div class="bcgpicture"></div>
+                        <div class="job-name">
+                            <h5>Darba nosaukums</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-block">
+                    <div class="job">
+                        <div class="bcgpicture"></div>
+                        <div class="job-name">
+                            <h5>Darba nosaukums</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-block">
+                    <div class="job">
+                        <div class="bcgpicture"></div>
+                        <div class="job-name">
+                            <h5>Darba nosaukums</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-block">
+                    <div class="job">
+                        <div class="bcgpicture"></div>
+                        <div class="job-name">
+                            <h5>Darba nosaukums</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-block">
+                    <div class="job">
+                        <div class="bcgpicture"></div>
+                        <div class="job-name">
+                            <h5>Darba nosaukums</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-block">
+                    <div class="job">
+                        <div class="bcgpicture"></div>
+                        <div class="job-name">
+                            <h5>Darba nosaukums</h5>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+            
+            <div class="contact-me">
+                <h4>Sazinies ar mani</h4>
+                <div class="icon-bar">
+                    <a href="" class="fb"></a>
+                    <a href="" class="twit"></a>
+                    <a href="" class="in"></a>
+                    <a href="" class="insta"></a>
+                    <a href="" class="git"></a>
+                </div>
+            </div>
+            <div class="btn-contact">
+                <a href="portfolio.html">
+                    <button class="btn-contact">Kontakti</button></a>
+            </div>
         </div>
     </main>
-
-
-
-
-
+    <footer>
+         <div id="footer"></div> 
+    </footer>
+  
 </body>
+
+
+
 
 </html>
