@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <meta name="author" content="Toms Ilzbergs">
-        <meta name="description" content="My first Portfolio, which I made as project for webskola.lv">
-        <meta name="keywords" content="portfolio, webskola,project">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
-            </script>
-        <script>
-            $(function () {
-                $("#nav-bar").load("parts/nav-bar.html");
-                $("#footer").load("parts/footer.html");
-            });
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
         </script>
-        <meta name="author" content="Toms Ilzbergs">
-        <meta name="description" content="My first Portfolio, which I made as project for webskola.lv">
-        <meta name="keywords" content="portfolio, webskola,project">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    </head>
+    <script>
+        $(function () {
+            $("#nav-bar").load("parts/nav-bar.html");
+            $("#footer").load("parts/footer.html");
+        });
+    </script>
+    <meta name="author" content="Toms Ilzbergs">
+    <meta name="description" content="My first Portfolio, which I made as project for webskola.lv">
+    <meta name="keywords" content="portfolio, webskola,project">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/5944f7c65f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+
 <body>
     <header class="contact">
-        <div id="nav-bar"></div> 
+        <div id="nav-bar"></div>
     </header>
-    
+    <div class="contact-head">
+        <h4>Kontakti</h4>
+    </div>
+    <main>
+        <div class="container">
+            <div class="wrapper-contact">
+                <p>Pellentesque eu tellus eros. Nam ut turpis libero. Morbi tempor pellentesque commodo. Sed vel
+                    consequat leo. Vivamus felis erat, commodo vel tempor ac, auctor et justo. Donec risus nisi, dapibus
+                    a ullamcorper in, faucibus vulputate sapien.</p>
+                    <form action="">
+                       <input type="text" placeholder="Tavs vārds">
+                       <input type="text" placeholder="Tavs uzvārds">
+                       <input type="email" placeholder="Tavs epasts">
+                       <input type="button" value="Apskatīt"> 
+                    </form>
+                    
+            <div class="contact-me">
+                <h4>Sazinies ar mani</h4>
+                <div class="icon-bar">
+                    <a href=""> <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+
 
     <footer>
-        <div id="footer"></div> 
-   </footer>
-    
+        <div id="footer"></div>
+    </footer>
+
 </body>
+
 </html>

@@ -1,49 +1,92 @@
 .contact {
-  background-color: $magenta;
-  width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-width: 350px;
-
+  height: 62px;
+  background-image: none;
   .menu-row {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 62px;
-    align-items: center;
-
-    a {
-      text-decoration: none;
-      font-size: 18px;
-      margin: 20px 35px;
-      color: white;
+    background-color: $magenta;
+    @media screen and (min-width: 426px) {
+      height: 67px;
     }
-    .name {
-      font-size: 18px;
-      font-weight: 300;
-      z-index: 1;
-    }
-    nav {
-      a {
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-        z-index: 1;
-        color: white;
-        display: none;
-      }
+    @media screen and (min-width: 769px) {
+      height: 95px;
     }
   }
-  .logo-bars {
-    background-image: url('template/images/bars.svg');
-    width: 20px;
-    height: 25px;
-    background-size: cover;
-    margin: 20px 35px;
-    z-index: 1;
-    display: block;
-    cursor: pointer;
+
+  &::after {
+    display: none;
+  }
+}
+.contact-head {
+  h4 {
+    font-size: 42px;
+    font-weight: 500;
+    margin: 75px 0;
+    text-align: center;
+    @media screen and (min-width: 769px) {
+      margin: 103px 0;
+    }
+  }
+}
+.wrapper-contact {
+  padding: 60px 12px;
+  p {
+    color: $lightGrey;
+    font-size: 18;
+    font-weight: 300;
+    text-align: center;
+    line-height: 21px;
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+      width: 100%;
+      margin-bottom: 40px;
+      font-family: 'Roboto', sans-serif, Arial;
+       border: 1px solid $linecolor;
+      // border-top-style: hidden;
+      // border-right-style: hidden;
+      // border-left-style: hidden;
+      outline: none;
+    
+    
+    }
+    input[type='text'] {
+      font-size: 14px;
+      line-height: 16px;
+      color: $lightGrey;
+      height: 38px;
+    }
+    input[type='email'] {
+      width: 100%;
+      min-height: 92px;
+      font-size: 14px;
+      line-height: 92px;
+    }
+
+    input[type='email']::-webkit-input-placeholder {
+      color:$lightGrey;
+      transform: translateY(-20px);
+      vertical-align:top;
+      
+    
+    }
+  
+    input[type='button'] {
+      color: white;
+      font-size: 12px;
+      font-weight: 400;
+      width: 150px;
+      height: 40px;
+      background-color: #9c27b0;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
+      cursor: pointer;
+      display: block;
+    }
   }
 }
