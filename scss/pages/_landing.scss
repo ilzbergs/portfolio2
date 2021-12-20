@@ -22,6 +22,7 @@ header{
     padding: 0 35px;
     @media screen and (min-width: 769px) {
       padding:0 160px;
+      background: none;
     }
     .name {
       font-size: 18px;
@@ -179,7 +180,8 @@ main {
     filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
     min-width: 300px;
     top: 600px;
-    // margin-top: -84px;
+    margin-top: -84px;
+   
     @media screen and (min-width: 769px) {
       margin-left: 60px;
       margin-right: 60px;
@@ -234,8 +236,10 @@ main {
     }
 
     .paragraph {
-      @media screen and (min-width: 426px) {
+      @media screen and (min-width: 769px) {
         display: flex;
+        padding: 0 99px;
+        padding-top: 40px;
       }
       .options {
         padding: 0 12px;
@@ -246,6 +250,7 @@ main {
         }
         @media screen and (min-width: 769px) {
           padding-top: 40px;
+          padding: 0 0;
         }
 
         .par-logo {
@@ -348,8 +353,8 @@ main {
             overflow: hidden;
             .bcgpicture {
               background-image: url(template/images/job-picture.jpg);
-              width: 342px;
-              height: 190px;
+              width: 364px;
+              height: 200px;
               background-size: contain;
               background-repeat: no-repeat;
             }
@@ -387,6 +392,9 @@ main {
           .fab {
             color: $greyColor;
             font-size: 65px;
+            @media screen and (min-width: 426px){
+              font-size: 80px;
+            }
           }
         }
       }

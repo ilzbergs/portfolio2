@@ -81,6 +81,7 @@ header .menu-row {
 @media screen and (min-width: 769px) {
   header .menu-row {
     padding: 0 160px;
+    background: none;
   }
 }
 header .menu-row .name {
@@ -250,6 +251,7 @@ main .container {
           filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
   min-width: 300px;
   top: 600px;
+  margin-top: -84px;
 }
 @media screen and (min-width: 769px) {
   main .container {
@@ -313,11 +315,13 @@ main .container .par-name {
     font-size: 36px;
   }
 }
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 769px) {
   main .container .paragraph {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0 99px;
+    padding-top: 40px;
   }
 }
 main .container .paragraph .options {
@@ -333,6 +337,7 @@ main .container .paragraph .options {
 @media screen and (min-width: 769px) {
   main .container .paragraph .options {
     padding-top: 40px;
+    padding: 0 0;
   }
 }
 main .container .paragraph .options .par-logo {
@@ -473,8 +478,8 @@ main .container .job-container .row .job-block .job {
 }
 main .container .job-container .row .job-block .job .bcgpicture {
   background-image: url(template/images/job-picture.jpg);
-  width: 342px;
-  height: 190px;
+  width: 364px;
+  height: 200px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -510,6 +515,11 @@ main .container .contact-me .icon-bar a {
 main .container .contact-me .icon-bar a .fab {
   color: #3c4858;
   font-size: 65px;
+}
+@media screen and (min-width: 426px) {
+  main .container .contact-me .icon-bar a .fab {
+    font-size: 80px;
+  }
 }
 main .container .btn-contact {
   display: -webkit-box;
@@ -626,17 +636,43 @@ footer ul a {
   font-weight: 500;
   margin: 75px 0;
   text-align: center;
+  padding-bottom: 75px;
+}
+@media screen and (min-width: 426px) {
+  .contact-head h4 {
+    font-size: 48px;
+  }
 }
 @media screen and (min-width: 769px) {
   .contact-head h4 {
     margin: 103px 0;
+    font-size: 53px;
   }
 }
 
-.wrapper-contact {
-  padding: 60px 12px;
+.contact-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.wrapper-contact p {
+.contact-container .wrapper-contact {
+  padding: 50px 12px;
+}
+@media screen and (min-width: 426px) {
+  .contact-container .wrapper-contact {
+    padding: 60px 12px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .contact-container .wrapper-contact {
+    padding: 90px 0;
+    max-width: 750px;
+  }
+}
+.contact-container .wrapper-contact p {
   color: #999999;
   font-size: 18;
   font-weight: 300;
@@ -644,7 +680,7 @@ footer ul a {
   line-height: 21px;
   margin-bottom: 30px;
 }
-.wrapper-contact form {
+.contact-container .wrapper-contact form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -656,32 +692,50 @@ footer ul a {
       -ms-flex-align: center;
           align-items: center;
 }
-.wrapper-contact form input {
+.contact-container .wrapper-contact form .input-text {
   width: 100%;
-  margin-bottom: 40px;
+}
+@media screen and (min-width: 769px) {
+  .contact-container .wrapper-contact form .input-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+.contact-container .wrapper-contact form input {
+  width: 100%;
   font-family: 'Roboto', sans-serif, Arial;
   border: 1px solid #d2d2d2;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
   outline: none;
 }
-.wrapper-contact form input[type='text'] {
+.contact-container .wrapper-contact form input[type='text'] {
   font-size: 14px;
   line-height: 16px;
   color: #999999;
   height: 38px;
 }
-.wrapper-contact form input[type='email'] {
+@media screen and (min-width: 769px) {
+  .contact-container .wrapper-contact form input[type='text'] {
+    margin: 0 12px;
+  }
+}
+.contact-container .wrapper-contact form input[type='email'] {
   width: 100%;
   min-height: 92px;
   font-size: 14px;
+  color: #999999;
   line-height: 92px;
 }
-.wrapper-contact form input[type='email']::-webkit-input-placeholder {
-  color: #999999;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  vertical-align: top;
+@media screen and (min-width: 769px) {
+  .contact-container .wrapper-contact form input[type='email'] {
+    margin-top: 30px;
+  }
 }
-.wrapper-contact form input[type='button'] {
+.contact-container .wrapper-contact form input[type='button'] {
   color: white;
   font-size: 12px;
   font-weight: 400;
@@ -696,6 +750,25 @@ footer ul a {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
   cursor: pointer;
   display: block;
+  margin-top: 40px;
+}
+@media screen and (min-width: 769px) {
+  .contact-container .wrapper-contact form input[type='button'] {
+    margin-top: 30px;
+  }
+}
+.contact-container .wrapper-contact .contact-me h4 {
+  margin-top: 50px;
+}
+@media screen and (min-width: 426px) {
+  .contact-container .wrapper-contact .contact-me h4 {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .contact-container .wrapper-contact .contact-me h4 {
+    margin-top: 90px;
+  }
 }
 
 .portfolio {
@@ -721,7 +794,7 @@ footer ul a {
   min-width: 350px;
 }
 
-main .container-portfolio {
+.container-portfolio {
   background-color: white;
   margin: 0 25px;
   border-radius: 5px;
@@ -733,31 +806,33 @@ main .container-portfolio {
   padding: 0 12px;
 }
 @media screen and (min-width: 769px) {
-  main .container-portfolio {
+  .container-portfolio {
     margin-left: 60px;
     margin-right: 60px;
   }
 }
-main .container-portfolio .lp-wrapper {
+.container-portfolio .lp-wrapper {
   padding: 50px 0;
 }
 @media screen and (min-width: 426px) {
-  main .container-portfolio .lp-wrapper {
+  .container-portfolio .lp-wrapper {
     padding: 60px 0;
   }
 }
 @media screen and (min-width: 769px) {
-  main .container-portfolio .lp-wrapper {
+  .container-portfolio .lp-wrapper {
     padding: 90px 0;
   }
 }
-main .container-portfolio .lp-wrapper .text-block {
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.container-portfolio .lp-wrapper .text-block {
+  margin-bottom: 20px;
 }
-main .container-portfolio .lp-wrapper .text-block-img {
+@media screen and (min-width: 769px) {
+  .container-portfolio .lp-wrapper .text-block {
+    margin-bottom: 40px;
+  }
+}
+.container-portfolio .lp-wrapper .text-block .text-block-img {
   background-image: url(template/images/job-picture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -766,27 +841,56 @@ main .container-portfolio .lp-wrapper .text-block-img {
   margin: 40px 0;
 }
 @media screen and (min-width: 426px) {
-  main .container-portfolio .lp-wrapper .text-block-img {
+  .container-portfolio .lp-wrapper .text-block .text-block-img {
     height: 450px;
   }
 }
 @media screen and (min-width: 769px) {
-  main .container-portfolio .lp-wrapper .text-block-img {
+  .container-portfolio .lp-wrapper .text-block .text-block-img {
     height: 600px;
+    max-width: 900px;
+    margin: 40px auto;
   }
 }
-main .container-portfolio .lp-wrapper h4 {
+.container-portfolio .lp-wrapper .text-block h4 {
   font-size: 24px;
   font-weight: 500;
   text-align: center;
+  color: #3c4858;
 }
-main .container-portfolio .lp-wrapper p {
+@media screen and (min-width: 426px) {
+  .container-portfolio .lp-wrapper .text-block h4 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .container-portfolio .lp-wrapper .text-block h4 {
+    font-size: 42px;
+  }
+}
+.container-portfolio .lp-wrapper .text-block p {
   font-size: 16px;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 20px;
+  color: #999999;
+  line-height: 18px;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
 }
-main .container-portfolio .lp-wrapper .list ul {
+@media screen and (min-width: 426px) {
+  .container-portfolio .lp-wrapper .text-block p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .container-portfolio .lp-wrapper .text-block p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.container-portfolio .lp-wrapper .list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,7 +898,7 @@ main .container-portfolio .lp-wrapper .list ul {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main .container-portfolio .lp-wrapper .list ul li {
+.container-portfolio .lp-wrapper .list ul li {
   font-size: 10px;
   font-weight: 500;
   color: white;
@@ -808,7 +912,7 @@ main .container-portfolio .lp-wrapper .list ul li {
   text-align: center;
   padding: 5px;
 }
-main .container-portfolio .btn-contact-lp {
+.container-portfolio .btn-contact-lp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -819,10 +923,10 @@ main .container-portfolio .btn-contact-lp {
       -ms-flex-align: center;
           align-items: center;
 }
-main .container-portfolio .btn-contact-lp a {
+.container-portfolio .btn-contact-lp a {
   text-decoration: none;
 }
-main .container-portfolio .btn-contact-lp button {
+.container-portfolio .btn-contact-lp button {
   color: white;
   font-size: 12px;
   font-weight: 400;
