@@ -396,6 +396,7 @@ main {
         }
       }
       .row {
+        padding: 0 12px;
         @media screen and (min-width: 426px) {
           display: flex;
           flex-wrap: wrap;

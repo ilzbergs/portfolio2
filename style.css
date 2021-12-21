@@ -523,6 +523,9 @@ main .container .job-container .my-jobs {
     margin-bottom: 40px;
   }
 }
+main .container .job-container .row {
+  padding: 0 12px;
+}
 @media screen and (min-width: 426px) {
   main .container .job-container .row {
     display: -webkit-box;
