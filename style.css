@@ -76,11 +76,11 @@ header .menu-row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 35px;
+  padding: 0 20px;
 }
 @media screen and (min-width: 769px) {
   header .menu-row {
-    padding: 0 160px;
+    padding: 0 140px;
     background: none;
   }
 }
@@ -94,6 +94,7 @@ header .menu-row .name a {
   color: white;
   font-weight: 300;
   z-index: 1;
+  padding: 10px;
 }
 header .menu-row .menu {
   margin-left: auto;
@@ -103,9 +104,6 @@ header .menu-row .menu nav {
   z-index: 1;
   position: relative;
   text-transform: uppercase;
-}
-header .menu-row .menu nav a {
-  text-decoration: none;
 }
 header .menu-row .menu nav ul {
   display: -webkit-box;
@@ -117,7 +115,6 @@ header .menu-row .menu nav ul {
 }
 header .menu-row .menu nav ul li {
   color: white;
-  margin: 10px;
   font-size: 12px;
   font-weight: 400;
 }
@@ -129,12 +126,21 @@ header .menu-row .menu nav ul li {
 header .menu-row .menu nav ul li i {
   font-size: 16px;
   font-weight: 400;
+  content: '\f381';
+  font-weight: 900;
+  margin-right: 5px;
+}
+header .menu-row .menu nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 header .menu-row .menu .logo-bars {
   color: white;
   font-size: 22px;
   z-index: 1;
   position: relative;
+  padding: 22px;
   cursor: pointer;
 }
 @media screen and (min-width: 426px) {
@@ -182,6 +188,7 @@ header .intro-header .wrapper {
 @media screen and (min-width: 426px) and (min-width: 769px) {
   header .intro-header .wrapper {
     padding-left: 150px;
+    max-width: 692px;
   }
 }
 
@@ -194,11 +201,14 @@ header .intro-header .wrapper h1 {
 @media screen and (min-width: 426px) {
   header .intro-header .wrapper h1 {
     font-size: 48px;
+    margin-bottom: 10px;
+    line-height: 63px;
   }
 }
 @media screen and (min-width: 769px) {
   header .intro-header .wrapper h1 {
     font-size: 53px;
+    line-height: 70px;
   }
 }
 header .intro-header .wrapper p {
@@ -209,38 +219,49 @@ header .intro-header .wrapper p {
 }
 @media screen and (min-width: 426px) {
   header .intro-header .wrapper p {
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 @media screen and (min-width: 769px) {
   header .intro-header .wrapper p {
-    font-size: 17px;
+    line-height: 24px;
   }
 }
 header .intro-header .wrapper .btn {
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-header .intro-header .wrapper .btn a::before {
-  content: '';
-  display: inline-block;
-  background-image: url("template/images/grip-horizontal.svg");
-  background-size: 14px 18px;
-  width: 14px;
-  height: 14px;
-  margin-right: 5px;
+@media screen and (min-width: 426px) {
+  header .intro-header .wrapper .btn {
+    display: block;
+  }
 }
 header .intro-header .wrapper .btn a {
-  background-color: #F44336;
-  display: inline-block;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
   text-decoration: none;
+}
+header .intro-header .wrapper .btn button {
   color: white;
   font-size: 14px;
   font-weight: 400;
+  width: 170px;
+  height: 55px;
+  background-color: #f44336;
   text-transform: uppercase;
-  padding: 17px 37px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
+}
+header .intro-header .wrapper .btn button i {
+  margin: 5px;
+  font-size: 16px;
 }
 
 main .container {
@@ -251,52 +272,109 @@ main .container {
           filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
   min-width: 300px;
   top: 600px;
-  margin-top: -84px;
+  margin-top: -50px;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 426px) {
+  main .container {
+    margin-top: -60px;
+    padding-bottom: 60px;
+  }
 }
 @media screen and (min-width: 769px) {
   main .container {
     margin-left: 60px;
     margin-right: 60px;
+    padding-bottom: 90px;
   }
 }
-main .container .text-block {
+main .container .text-block-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .container .text-block-wrapper .text-block-image {
+  background-image: url(template/images/text-block.jpg);
+  height: 418px;
+  width: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 100px;
+  margin-top: 130px;
+  margin-bottom: 90px;
+}
+@media screen and (max-width: 1024px) {
+  main .container .text-block-wrapper .text-block-image {
+    display: none;
+  }
+}
+main .container .text-block-wrapper .text-block-image::after {
+  content: '';
+  display: block;
+  background-color: #3c4858;
+  z-index: -1;
+  width: 321px;
+  height: 416px;
+  position: relative;
+  top: -38px;
+  left: -48px;
+}
+main .container .text-block-wrapper .text-block {
   text-align: center;
   padding: 50px 0;
 }
 @media screen and (min-width: 426px) {
-  main .container .text-block {
+  main .container .text-block-wrapper .text-block {
     padding: 60px 0;
   }
 }
-@media screen and (min-width: 769px) {
-  main .container .text-block {
-    padding: 140px 0;
+@media screen and (min-width: 1025px) {
+  main .container .text-block-wrapper .text-block {
+    padding: 90px 0;
+    max-width: 470px;
   }
 }
-main .container .text-block h4 {
+main .container .text-block-wrapper .text-block h4 {
   font-weight: 400;
   color: #3c4858;
   font-size: 24px;
-  line-height: 28px;
-  padding-bottom: 20px;
+  line-height: 18px;
 }
 @media screen and (min-width: 426px) {
-  main .container .text-block h4 {
+  main .container .text-block-wrapper .text-block h4 {
     font-size: 28px;
-    padding-bottom: 30px;
+    line-height: 32px;
   }
 }
 @media screen and (min-width: 769px) {
-  main .container .text-block h4 {
+  main .container .text-block-wrapper .text-block h4 {
     font-size: 36px;
+    line-height: 48px;
+    margin-top: 50px;
   }
 }
-main .container .text-block p {
+main .container .text-block-wrapper .text-block p {
   color: #999999;
   font-weight: 300;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 19px;
   margin: 0 12px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 426px) {
+  main .container .text-block-wrapper .text-block p {
+    font-size: 19px;
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 769px) {
+  main .container .text-block-wrapper .text-block p {
+    font-size: 17px;
+    font-weight: 300;
+  }
 }
 main .container .par-name {
   color: #3c4858;
@@ -315,11 +393,15 @@ main .container .par-name {
     font-size: 36px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 426px) {
   main .container .paragraph {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media screen and (min-width: 769px) {
+  main .container .paragraph {
     padding: 0 99px;
     padding-top: 40px;
   }
@@ -448,8 +530,9 @@ main .container .job-container .my-jobs {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 @media screen and (min-width: 769px) {
@@ -478,10 +561,22 @@ main .container .job-container .row .job-block .job {
 }
 main .container .job-container .row .job-block .job .bcgpicture {
   background-image: url(template/images/job-picture.jpg);
-  width: 364px;
-  height: 200px;
-  background-size: contain;
+  width: 353px;
+  height: 222px;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 426px) {
+  main .container .job-container .row .job-block .job .bcgpicture {
+    width: 342px;
+    height: 222px;
+  }
+}
+@media screen and (min-width: 769px) {
+  main .container .job-container .row .job-block .job .bcgpicture {
+    width: 364px;
+    height: 222px;
+  }
 }
 main .container .job-container .row .job-block .job .job-name {
   color: #3c4858;
@@ -548,17 +643,6 @@ main .container .btn-contact button {
   border: none;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
-  margin-bottom: 50px;
-}
-@media screen and (min-width: 426px) {
-  main .container .btn-contact button {
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 769px) {
-  main .container .btn-contact button {
-    margin-bottom: 90px;
-  }
 }
 
 footer {
@@ -636,7 +720,8 @@ footer ul a {
   font-weight: 500;
   margin: 75px 0;
   text-align: center;
-  padding-bottom: 75px;
+  padding-bottom: 50px;
+  color: #3c4858;
 }
 @media screen and (min-width: 426px) {
   .contact-head h4 {
@@ -657,20 +742,11 @@ footer ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 750px;
+  margin: auto;
 }
 .contact-container .wrapper-contact {
-  padding: 50px 12px;
-}
-@media screen and (min-width: 426px) {
-  .contact-container .wrapper-contact {
-    padding: 60px 12px;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .contact-container .wrapper-contact {
-    padding: 90px 0;
-    max-width: 750px;
-  }
+  padding: 0 12px;
 }
 .contact-container .wrapper-contact p {
   color: #999999;
@@ -679,6 +755,17 @@ footer ul a {
   text-align: center;
   line-height: 21px;
   margin-bottom: 30px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 426px) {
+  .contact-container .wrapper-contact p {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .contact-container .wrapper-contact p {
+    margin-top: 90px;
+  }
 }
 .contact-container .wrapper-contact form {
   display: -webkit-box;
@@ -725,17 +812,29 @@ footer ul a {
 }
 .contact-container .wrapper-contact form input[type='email'] {
   width: 100%;
-  min-height: 92px;
   font-size: 14px;
   color: #999999;
-  line-height: 92px;
+  line-height: 16px;
+  height: 38px;
+  font-family: 'Roboto', sans-serif, Arial;
 }
-@media screen and (min-width: 769px) {
-  .contact-container .wrapper-contact form input[type='email'] {
-    margin-top: 30px;
-  }
+.contact-container .wrapper-contact form textarea {
+  margin-top: 30px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif, Arial;
+  color: #999999;
+  font-size: 14px;
+  min-height: 92px;
+  border: none;
+  outline: none;
+  border: 1px solid #d2d2d2;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  line-height: 13px;
+  resize: none;
 }
-.contact-container .wrapper-contact form input[type='button'] {
+.contact-container .wrapper-contact form button {
   color: white;
   font-size: 12px;
   font-weight: 400;
@@ -751,23 +850,17 @@ footer ul a {
   cursor: pointer;
   display: block;
   margin-top: 40px;
-}
-@media screen and (min-width: 769px) {
-  .contact-container .wrapper-contact form input[type='button'] {
-    margin-top: 30px;
-  }
-}
-.contact-container .wrapper-contact .contact-me h4 {
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 426px) {
-  .contact-container .wrapper-contact .contact-me h4 {
-    margin-top: 60px;
+  .contact-container .wrapper-contact form button {
+    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 769px) {
-  .contact-container .wrapper-contact .contact-me h4 {
-    margin-top: 90px;
+  .contact-container .wrapper-contact form button {
+    margin-top: 30px;
+    margin-bottom: 90px;
   }
 }
 
@@ -795,80 +888,59 @@ footer ul a {
 }
 
 .container-portfolio {
-  background-color: white;
-  margin: 0 25px;
-  border-radius: 5px;
-  -webkit-filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
-          filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
-  top: 600px;
-  margin-top: -84px;
-  min-width: 300px;
-  padding: 0 12px;
+  margin: 0 12px;
 }
-@media screen and (min-width: 769px) {
-  .container-portfolio {
-    margin-left: 60px;
-    margin-right: 60px;
-  }
-}
-.container-portfolio .lp-wrapper {
-  padding: 50px 0;
+.container-portfolio .text-block-portfolio {
+  padding-top: 50px;
 }
 @media screen and (min-width: 426px) {
-  .container-portfolio .lp-wrapper {
-    padding: 60px 0;
+  .container-portfolio .text-block-portfolio {
+    padding-top: 60px;
   }
 }
 @media screen and (min-width: 769px) {
-  .container-portfolio .lp-wrapper {
-    padding: 90px 0;
+  .container-portfolio .text-block-portfolio {
+    padding-top: 90px;
   }
 }
-.container-portfolio .lp-wrapper .text-block {
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 769px) {
-  .container-portfolio .lp-wrapper .text-block {
-    margin-bottom: 40px;
-  }
-}
-.container-portfolio .lp-wrapper .text-block .text-block-img {
+.container-portfolio .text-block-portfolio .text-block-img {
   background-image: url(template/images/job-picture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 230px;
   background-position: center;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 @media screen and (min-width: 426px) {
-  .container-portfolio .lp-wrapper .text-block .text-block-img {
+  .container-portfolio .text-block-portfolio .text-block-img {
     height: 450px;
+    margin: 40px 0;
   }
 }
 @media screen and (min-width: 769px) {
-  .container-portfolio .lp-wrapper .text-block .text-block-img {
+  .container-portfolio .text-block-portfolio .text-block-img {
     height: 600px;
     max-width: 900px;
     margin: 40px auto;
   }
 }
-.container-portfolio .lp-wrapper .text-block h4 {
+.container-portfolio .text-block-portfolio h4 {
   font-size: 24px;
   font-weight: 500;
   text-align: center;
   color: #3c4858;
 }
 @media screen and (min-width: 426px) {
-  .container-portfolio .lp-wrapper .text-block h4 {
+  .container-portfolio .text-block-portfolio h4 {
     font-size: 36px;
   }
 }
 @media screen and (min-width: 769px) {
-  .container-portfolio .lp-wrapper .text-block h4 {
+  .container-portfolio .text-block-portfolio h4 {
     font-size: 42px;
   }
 }
-.container-portfolio .lp-wrapper .text-block p {
+.container-portfolio .text-block-portfolio p {
   font-size: 16px;
   font-weight: 300;
   text-align: center;
@@ -877,20 +949,21 @@ footer ul a {
   max-width: 900px;
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 426px) {
-  .container-portfolio .lp-wrapper .text-block p {
+  .container-portfolio .text-block-portfolio p {
     font-size: 18px;
     line-height: 21px;
   }
 }
 @media screen and (min-width: 769px) {
-  .container-portfolio .lp-wrapper .text-block p {
-    font-size: 18px;
+  .container-portfolio .text-block-portfolio p {
     line-height: 24px;
+    padding-bottom: 40px;
   }
 }
-.container-portfolio .lp-wrapper .list ul {
+.container-portfolio .list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -898,7 +971,7 @@ footer ul a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.container-portfolio .lp-wrapper .list ul li {
+.container-portfolio .list ul li {
   font-size: 10px;
   font-weight: 500;
   color: white;
@@ -909,10 +982,10 @@ footer ul a {
   margin: 0 5px;
   margin-bottom: 40px;
   border-radius: 10px;
-  text-align: center;
-  padding: 5px;
+  padding: 5px 10px;
 }
-.container-portfolio .btn-contact-lp {
+
+.btn-contact-lp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -923,10 +996,10 @@ footer ul a {
       -ms-flex-align: center;
           align-items: center;
 }
-.container-portfolio .btn-contact-lp a {
+.btn-contact-lp a {
   text-decoration: none;
 }
-.container-portfolio .btn-contact-lp button {
+.btn-contact-lp button {
   color: white;
   font-size: 12px;
   font-weight: 400;
@@ -949,7 +1022,6 @@ footer ul a {
 html,
 body {
   width: 100%;
-  position: relative;
 }
 
 body {

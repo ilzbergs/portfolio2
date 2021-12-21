@@ -13,6 +13,7 @@
         $(function () {
             $("#nav-bar").load("parts/nav-bar.html");
             $("#footer").load("parts/footer.html");
+            $("#soc-media").load("parts/soc.media-row.html");
         });
     </script>
     <meta name="author" content="Toms Ilzbergs">
@@ -40,30 +41,23 @@
                         consequat leo. Vivamus felis erat, commodo vel tempor ac, auctor et justo. Donec risus nisi,
                         dapibus
                         a ullamcorper in, faucibus vulputate sapien.</p>
-                    <form action="">
+                    <form action="index.html">
                         <div class="input-text">
-                            <input type="text" placeholder="Tavs vārds">
-                            <input type="text" placeholder="Tavs uzvārds">
+                            <input type="text" placeholder="Tavs vārds" minlength="2" maxlength="20" required
+                                title="Enter your name">
+                            <input type="email" placeholder="Tavs epasts" required title="Enter valid e-mail"
+                                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
                         </div>
 
-                        <input type="email" placeholder="Tavs epasts">
-                        <input type="button" value="Apskatīt">
+                        <textarea name="" id="" cols="" rows="" placeholder="Tavs jautājums"></textarea>
+                        <button type="submit" class="button">Apskatīt</button>
                     </form>
 
-                    <div class="contact-me">
-                        <h4>Sazinies ar mani</h4>
-                        <div class="icon-bar">
-                            <a href=""> <i class="fab fa-facebook"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-linkedin-in"></i>
-                                <i class="fab fa-instagram"></i>
-                                <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
+                  
                 </div>
-                
-            </div>
 
+            </div>
+            <div id="soc-media"></div>
         </div>
     </main>
 

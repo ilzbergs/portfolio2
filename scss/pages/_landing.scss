@@ -1,5 +1,5 @@
 //menu
-header{
+header {
   background-image: url('template/images/header-image.jpg');
   height: 660px;
   width: 100%;
@@ -19,68 +19,73 @@ header{
     background-color: rgba(0, 0, 0, 0.4);
     height: 62px;
     align-items: center;
-    padding: 0 35px;
+    padding: 0 20px;
     @media screen and (min-width: 769px) {
-      padding:0 160px;
+      padding: 0 140px;
       background: none;
     }
     .name {
       font-size: 18px;
       z-index: 1;
+
       a {
         text-decoration: none;
         font-size: 18px;
         color: white;
         font-weight: 300;
         z-index: 1;
-      }  
+        padding: 10px;
+      }
     }
 
     .menu {
       margin-left: auto;
-     
 
       nav {
         width: 100%;
         z-index: 1;
         position: relative;
-      text-transform: uppercase;
-      a{
-        text-decoration: none;
-      }
-     ul{
-       display: flex;
-       align-items: baseline;
-       li{
-         color: white;
-         margin: 10px;
-         font-size: 12px;
-         font-weight: 400;
+        text-transform: uppercase;
+      
+        ul {
+          display: flex;
+          align-items: baseline;
+          li {
+            color: white;
+            font-size: 12px;
+            font-weight: 400;
 
-         @media screen and (max-width: 426px) {
-          display: none;
-         
-         
+            @media screen and (max-width: 426px) {
+              display: none;
+            }
+            i {
+              font-size: 16px;
+              font-weight: 400;
+              content: '\f381';
+              font-weight: 900;
+              margin-right: 5px;
+              
+            }
+            a{
+              text-decoration: none;
+              color: white;
+              padding: 10px;
+            }
+          }
         }
-       i{
-         font-size: 16px;
-         font-weight: 400;
-        }
-       }
       }
-    }
       .logo-bars {
         color: white;
         font-size: 22px;
         z-index: 1;
         position: relative;
+        padding: 22px;
         cursor: pointer;
         @media screen and (min-width: 426px) {
           display: none;
         }
       }
-    
-  }
+    }
   }
   &::after {
     content: '';
@@ -114,6 +119,7 @@ header{
         text-align: left;
         @media screen and (min-width: 769px) {
           padding-left: 150px;
+          max-width: 692px;
         }
       }
       h1 {
@@ -123,9 +129,12 @@ header{
         line-height: 55px;
         @media screen and (min-width: 426px) {
           font-size: 48px;
+          margin-bottom: 10px;
+          line-height: 63px;
         }
         @media screen and (min-width: 769px) {
           font-size: 53px;
+          line-height: 70px;
         }
       }
       p {
@@ -134,38 +143,42 @@ header{
         line-height: 21px;
         font-weight: 400;
         @media screen and (min-width: 426px) {
-          font-size: 17px;
+          font-size: 18px;
+          line-height: 24px;
         }
         @media screen and (min-width: 769px) {
-          font-size: 17px;
+          line-height: 24px;
         }
       }
-      //button
 
+      //button
       .btn {
         margin-top: 40px;
-
-        a::before {
-          content: '';
-          display: inline-block;
-          background-image: url('template/images/grip-horizontal.svg');
-          background-size: 14px 18px;
-          width: 14px;
-          height: 14px;
-          margin-right: 5px;
+        display: flex;
+        justify-content: center;
+        @media screen and (min-width: 426px) {
+          display: block;
         }
+
         a {
-          background-color: $headerBtnColor;
-          display: inline-block;
-          border-radius: 5px;
-          border: none;
-          cursor: pointer;
           text-decoration: none;
+        }
+        button {
           color: white;
           font-size: 14px;
           font-weight: 400;
+          width: 170px;
+          height: 55px;
+          background-color: #f44336;
           text-transform: uppercase;
-          padding: 17px 37px;
+          cursor: pointer;
+          border-radius: 5px;
+          border: none;
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
+          i {
+            margin: 5px;
+            font-size: 16px;
+          }
         }
       }
     }
@@ -180,43 +193,91 @@ main {
     filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.141));
     min-width: 300px;
     top: 600px;
-    margin-top: -84px;
-   
+    margin-top: -50px;
+    padding-bottom: 50px;
+    @media screen and (min-width: 426px) {
+      margin-top: -60px;
+      padding-bottom: 60px;
+    }
+
     @media screen and (min-width: 769px) {
       margin-left: 60px;
       margin-right: 60px;
+      padding-bottom: 90px;
     }
-    .text-block {
+    .text-block-wrapper{
+      display: flex;
+      justify-content: center;
+      .text-block-image{
+        background-image: url(template/images/text-block.jpg);
+        height: 418px;
+        width: 320px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 100px;
+        margin-top: 130px;
+        margin-bottom: 90px;
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
+        &::after{
+          content: '';
+          display: block;
+          background-color:$greyColor;
+          z-index:-1;
+          width: 321px;
+          height: 416px;
+          position: relative;
+          top: -38px;
+          left: -48px;  
+        }
+      }
+      .text-block {
       text-align: center;
       padding: 50px 0;
+
       @media screen and (min-width: 426px) {
         padding: 60px 0;
       }
-      @media screen and (min-width: 769px) {
-        padding: 140px 0;
+      @media screen and (min-width: 1025px) {
+        padding: 90px 0;
+        max-width: 470px;
       }
       h4 {
         font-weight: 400;
         color: $greyColor;
         font-size: 24px;
-        line-height: 28px;
-        padding-bottom: 20px;
+        line-height: 18px;
+
         @media screen and (min-width: 426px) {
           font-size: 28px;
-          padding-bottom: 30px;
+          line-height: 32px;
         }
         @media screen and (min-width: 769px) {
           font-size: 36px;
+          line-height: 48px;
+          margin-top: 50px;
         }
       }
       p {
         color: $lightGrey;
         font-weight: 300;
         font-size: 16px;
-        line-height: 18px;
+        line-height: 19px;
         margin: 0 12px;
+        margin-top: 20px;
+        @media screen and (min-width: 426px) {
+          font-size: 19px;
+          margin-top: 30px;
+        }
+        @media screen and (min-width: 769px){
+          font-size: 17px;
+          font-weight: 300;
+        }
       }
     }
+    }
+    
 
     // What I have learn?
     .par-name {
@@ -236,8 +297,10 @@ main {
     }
 
     .paragraph {
+      @media screen and (min-width: 426px)
+      {display: flex;}
       @media screen and (min-width: 769px) {
-        display: flex;
+        
         padding: 0 99px;
         padding-top: 40px;
       }
@@ -336,7 +399,7 @@ main {
         @media screen and (min-width: 426px) {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-around;
+          justify-content: space-evenly;
         }
         @media screen and (min-width: 769px) {
           justify-content: center;
@@ -353,10 +416,19 @@ main {
             overflow: hidden;
             .bcgpicture {
               background-image: url(template/images/job-picture.jpg);
-              width: 364px;
-              height: 200px;
-              background-size: contain;
+              width: 353px;
+              height: 222px;
+              background-size: cover;
               background-repeat: no-repeat;
+              @media screen and (min-width: 426px) {
+                width: 342px;
+              height: 222px;
+          
+              }
+              @media screen and (min-width: 769px) {
+                width: 364px;
+                height: 222px;
+              }
             }
 
             .job-name {
@@ -392,7 +464,7 @@ main {
           .fab {
             color: $greyColor;
             font-size: 65px;
-            @media screen and (min-width: 426px){
+            @media screen and (min-width: 426px) {
               font-size: 80px;
             }
           }
@@ -419,13 +491,6 @@ main {
         border-radius: 5px;
         border: none;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
-        margin-bottom: 50px;
-        @media screen and (min-width: 426px) {
-          margin-bottom: 60px;
-        }
-        @media screen and (min-width: 769px) {
-          margin-bottom: 90px;
-        }
       }
     }
   }
@@ -458,7 +523,7 @@ footer {
       padding: 15px;
     }
   }
-  }
+}
 .footertext {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -467,4 +532,3 @@ footer {
   line-height: 16px;
   color: $greyColor;
 }
-
