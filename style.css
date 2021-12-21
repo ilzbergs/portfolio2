@@ -147,7 +147,7 @@ header .menu-row .menu .logo-bars .dropdown .dropbtn {
   color: white;
   z-index: 1;
   position: relative;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
 }
