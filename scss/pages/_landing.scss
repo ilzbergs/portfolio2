@@ -87,7 +87,7 @@ header {
             color: white;
             z-index: 1;
             position: relative;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
             text-decoration: none;
           }
@@ -116,7 +116,10 @@ header {
           text-align: center;
           text-transform: uppercase;
         }
-
+        .media {
+          display: flex;
+          justify-content: center;
+        }
         .dropdown-content a:hover {
           background-color: rgba(0, 0, 0, 0.4);
         }
