@@ -156,7 +156,7 @@ main .container .job-container .my-jobs{font-size:28px;margin-bottom:30px}
 @media screen and (min-width:769px){
 main .container .job-container .my-jobs{font-size:36px;margin-bottom:40px}
 }
-main .container .job-container .row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+main .container .job-container .row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:0 12px}
 @media screen and (min-width:426px){
 main .container .job-container .row{-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}
 }
