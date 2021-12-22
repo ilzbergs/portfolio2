@@ -192,6 +192,7 @@ header .menu-row .menu .logo-bars .dropdown-content a {
   display: block;
   text-align: center;
   text-transform: uppercase;
+  padding: 10px;
 }
 header .menu-row .menu .logo-bars .media {
   display: -webkit-box;
