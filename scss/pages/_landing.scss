@@ -24,6 +24,7 @@ header {
       padding: 0 140px;
       background: none;
     }
+
     .name {
       font-size: 18px;
       z-index: 1;
@@ -35,6 +36,13 @@ header {
         font-weight: 300;
         z-index: 1;
         padding: 10px;
+      }
+      a:hover {
+        background-color: $lightGrey;
+        border-radius: 5px;
+        @media screen and (min-width: 768px) {
+          background-color: $greyColor;
+        }
       }
     }
 
@@ -50,6 +58,7 @@ header {
         ul {
           display: flex;
           align-items: baseline;
+
           li {
             color: white;
             font-size: 12px;
@@ -58,6 +67,7 @@ header {
             @media screen and (max-width: 426px) {
               display: none;
             }
+
             i {
               font-size: 16px;
               font-weight: 400;
@@ -65,10 +75,18 @@ header {
               font-weight: 900;
               margin-right: 5px;
             }
+
             a {
               text-decoration: none;
               color: white;
               padding: 10px;
+            }
+            a:hover {
+              background-color: $lightGrey;
+              border-radius: 5px;
+              @media screen and (min-width: 768px) {
+                background-color: $greyColor;
+              }
             }
           }
         }
@@ -87,11 +105,12 @@ header {
             color: white;
             z-index: 1;
             position: relative;
-            padding: 12px;
+            padding: 10px 10px 0px 10px;
             text-align: center;
             text-decoration: none;
           }
         }
+
         .dropdown-content {
           display: none;
           position: absolute;
@@ -102,7 +121,7 @@ header {
           z-index: 1;
           overflow: hidden;
           right: 5px;
-          top: 45px;
+          top: 49px;
           border-radius: 5px;
           opacity: 0.8;
         }
@@ -116,10 +135,12 @@ header {
           text-align: center;
           text-transform: uppercase;
         }
+
         .media {
           display: flex;
           justify-content: center;
         }
+
         .dropdown-content a:hover {
           background-color: rgba(0, 0, 0, 0.4);
         }
@@ -149,6 +170,7 @@ header {
       height: 700px;
     }
   }
+
   .intro-header {
     .wrapper {
       position: relative;
@@ -165,6 +187,7 @@ header {
           max-width: 692px;
         }
       }
+
       h1 {
         font-weight: 500;
         font-size: 42px;
@@ -180,6 +203,7 @@ header {
           line-height: 70px;
         }
       }
+
       p {
         color: white;
         font-size: 16px;
@@ -193,7 +217,6 @@ header {
           line-height: 24px;
         }
       }
-
       //button
       .btn {
         margin-top: 40px;
@@ -206,6 +229,7 @@ header {
         a {
           text-decoration: none;
         }
+
         button {
           color: white;
           font-size: 14px;
@@ -222,6 +246,10 @@ header {
             margin: 5px;
             font-size: 16px;
           }
+        }
+
+        button:hover {
+          transform: scale(1.1);
         }
       }
     }
@@ -242,12 +270,12 @@ main {
       margin-top: -60px;
       padding-bottom: 60px;
     }
-
     @media screen and (min-width: 769px) {
       margin-left: 60px;
       margin-right: 60px;
       padding-bottom: 90px;
     }
+
     .text-block-wrapper {
       display: flex;
       justify-content: center;
@@ -263,6 +291,7 @@ main {
         @media screen and (max-width: 1024px) {
           display: none;
         }
+
         &::after {
           content: '';
           display: block;
@@ -275,6 +304,7 @@ main {
           left: -48px;
         }
       }
+
       .text-block {
         text-align: center;
         padding: 50px 0;
@@ -286,6 +316,7 @@ main {
           padding: 90px 0;
           max-width: 470px;
         }
+
         h4 {
           font-weight: 400;
           color: $greyColor;
@@ -302,6 +333,7 @@ main {
             margin-top: 50px;
           }
         }
+
         p {
           color: $lightGrey;
           font-weight: 300;
@@ -346,6 +378,7 @@ main {
         padding: 0 99px;
         padding-top: 40px;
       }
+
       .options {
         padding: 0 12px;
         text-align: center;
@@ -366,13 +399,16 @@ main {
           align-items: center;
           justify-content: center;
         }
+
         .par-head {
           margin: 20px 0;
+
           h5 {
             color: $greyColor;
             font-size: 20px;
             font-weight: 500;
           }
+
           p {
             padding-top: 20px;
             color: $lightGrey;
@@ -380,6 +416,7 @@ main {
             font-weight: 300;
           }
         }
+
         .par-logo1 {
           background-image: url(template/images/css.svg);
           width: 50px;
@@ -388,6 +425,7 @@ main {
           align-items: center;
           justify-content: center;
         }
+
         .par-logo2 {
           background-image: url(template/images/js.svg);
           width: 50px;
@@ -396,6 +434,7 @@ main {
           align-items: center;
           justify-content: center;
         }
+
         .par-head {
           h4 {
             color: $greyColor;
@@ -403,6 +442,7 @@ main {
             font-size: 20px;
             margin-bottom: 18px;
           }
+
           p {
             color: $lightGrey;
             font-weight: 300;
@@ -421,6 +461,7 @@ main {
       @media screen and (min-width: 769px) {
         margin: 90px 0;
       }
+
       .my-jobs {
         color: $greyColor;
         font-size: 24px;
@@ -437,24 +478,39 @@ main {
           margin-bottom: 40px;
         }
       }
+
       .row {
-        padding: 0 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         @media screen and (min-width: 426px) {
-          display: flex;
-          flex-wrap: wrap;
           justify-content: space-evenly;
         }
         @media screen and (min-width: 769px) {
           justify-content: center;
         }
-
         .job-block {
-          display: flex;
-          justify-content: center;
-          overflow: hidden;
+          max-width: 353px;
+          min-width: 300px;
+          @media screen and (min-width: 426px) {
+            padding-bottom: 30px;
+          }
           @media screen and (min-width: 769px) {
             padding: 0px 6px;
+            padding-bottom: 30px;
           }
+          a {
+            text-decoration: none;
+            @media screen and (min-width: 426px) {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+            }
+            @media screen and (min-width: 769px) {
+              justify-content: center;
+            }
+          }
+
           .job {
             overflow: hidden;
             .bcgpicture {
@@ -481,6 +537,9 @@ main {
           }
         }
       }
+      .job-block:hover {
+        transform: scale(1.05);
+      }
     }
 
     //contacts
@@ -498,11 +557,14 @@ main {
           font-size: 36px;
         }
       }
+
       .icon-bar {
         text-align: center;
         margin: 35px 0;
+
         a {
           text-decoration: none;
+
           .fab {
             color: $greyColor;
             font-size: 65px;
@@ -513,6 +575,7 @@ main {
         }
       }
     }
+
     .btn-contact {
       display: flex;
       justify-content: center;
@@ -521,6 +584,7 @@ main {
       a {
         text-decoration: none;
       }
+
       button {
         color: white;
         font-size: 12px;
@@ -533,6 +597,9 @@ main {
         border-radius: 5px;
         border: none;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
+      }
+      button:hover {
+        transform: scale(1.1);
       }
     }
   }
@@ -555,6 +622,7 @@ footer {
     display: flex;
     li {
     }
+
     a {
       text-decoration: none;
       color: $greyColor;
@@ -566,6 +634,7 @@ footer {
     }
   }
 }
+
 .footertext {
   padding-top: 20px;
   padding-bottom: 30px;
