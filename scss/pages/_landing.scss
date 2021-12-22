@@ -611,6 +611,7 @@ footer {
     @media screen and (min-width: 426px) {
       flex-direction: row;
       justify-content: space-around;
+      align-items: baseline;
     }
   }
 
