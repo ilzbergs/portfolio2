@@ -26,7 +26,7 @@ header .menu-row .menu nav ul li{color:#fff;font-size:12px;font-weight:400}
 @media screen and (max-width:510px){
 header .menu-row .menu nav ul li{display:none}
 }
-header .menu-row .menu nav ul li i{font-size:16px;font-weight:400;content:'\f381';font-weight:900;margin-right:5px}
+header .menu-row .menu nav ul li i{font-size:16px;font-weight:400;content:'\f381';font-weight:900;margin-right:5px;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out}
 header .menu-row .menu nav ul li a{text-decoration:none;color:#fff;padding:10px}
 header .menu-row .menu nav ul li a:hover{border-bottom:1px solid #fff}
 @media screen and (min-width:511px){
@@ -34,7 +34,7 @@ header .menu-row .menu .logo-bars .dropdown{display:none}
 }
 header .menu-row .menu .logo-bars .dropdown .dropbtn,header .menu-row .menu .logo-bars .dropdown a{font-size:22px;display:inline-block;color:#fff;z-index:1;position:relative;padding:10px 10px 0 10px;text-align:center;text-decoration:none}
 header .menu-row .menu .logo-bars .dropdown-content{display:none;position:absolute;background-color:#fff;min-width:100px;height:auto;-webkit-filter:drop-shadow(0 8px 24px rgba(0, 0, 0, .141));filter:drop-shadow(0 8px 24px rgba(0, 0, 0, .141));z-index:1;overflow:hidden;right:5px;top:47px;border-radius:5px;opacity:.8}
-header .menu-row .menu .logo-bars .dropdown-content a{color:#3c4858;font-size:14px;font-weight:500;text-decoration:none;display:block;text-align:center;text-transform:uppercase;padding:10px}
+header .menu-row .menu .logo-bars .dropdown-content a{color:#3c4858;font-size:14px;font-weight:500;text-decoration:none;display:block;text-align:center;text-transform:uppercase;padding:10px;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out}
 header .menu-row .menu .logo-bars .media{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 header .menu-row .menu .logo-bars .dropdown-content a:hover{color:#fff;background-color:rgba(0,0,0,.4)}
 header .menu-row .menu .logo-bars .dropdown:hover .dropdown-content{display:block}
@@ -231,7 +231,13 @@ footer ul a{text-decoration:none;color:#3c4858;text-transform:uppercase;font-siz
 @media screen and (min-width:769px){
 .contact-container .wrapper-contact p{margin-top:90px}
 }
-.contact-container .wrapper-contact form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.contact-container .wrapper-contact form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:50px}
+@media screen and (min-width:426px){
+.contact-container .wrapper-contact form{margin-bottom:60px}
+}
+@media screen and (min-width:769px){
+.contact-container .wrapper-contact form{margin-bottom:90px}
+}
 .contact-container .wrapper-contact form .input-text{width:100%}
 @media screen and (min-width:769px){
 .contact-container .wrapper-contact form .input-text{display:-webkit-box;display:-ms-flexbox;display:flex}
@@ -242,15 +248,7 @@ footer ul a{text-decoration:none;color:#3c4858;text-transform:uppercase;font-siz
 .contact-container .wrapper-contact form input[type=text]{margin:0 12px 0 0}
 }
 .contact-container .wrapper-contact form input[type=email]{width:100%;font-size:14px;color:#999;line-height:16px;height:38px;font-family:Roboto,sans-serif,Arial}
-.contact-container .wrapper-contact form textarea{margin-top:30px;width:100%;font-family:Roboto,sans-serif,Arial;color:#999;font-size:14px;min-height:92px;border:none;outline:0;border:1px solid #d2d2d2;border-top-style:hidden;border-right-style:hidden;border-left-style:hidden;line-height:13px;resize:none}
-.contact-container .wrapper-contact form button{color:#fff;font-size:12px;font-weight:400;width:150px;height:40px;background-color:#9c27b0;text-transform:uppercase;cursor:pointer;border-radius:5px;border:none;-webkit-filter:drop-shadow(0 4px 4px rgba(0, 0, 0, .251));filter:drop-shadow(0 4px 4px rgba(0, 0, 0, .251));cursor:pointer;display:block;margin-top:40px;margin-bottom:50px}
-@media screen and (min-width:426px){
-.contact-container .wrapper-contact form button{margin-bottom:60px}
-}
-@media screen and (min-width:769px){
-.contact-container .wrapper-contact form button{margin-top:30px;margin-bottom:90px}
-}
-.contact-container .wrapper-contact form button:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}
+.contact-container .wrapper-contact form textarea{margin-top:30px;width:100%;font-family:Roboto,sans-serif,Arial;color:#999;font-size:14px;min-height:92px;border:none;outline:0;border:1px solid #d2d2d2;border-top-style:hidden;border-right-style:hidden;border-left-style:hidden;line-height:13px;resize:none;margin-bottom:40px}
 .portfolio{background-image:url(template/images/portfolio.jpg);height:380px;width:100%;background-repeat:no-repeat;background-size:cover;background-position:center;min-width:350px}
 .portfolio::after{content:'';display:block;background-color:#000;z-index:0;top:0;left:0;position:absolute;width:100%;height:380px;opacity:.4;min-width:350px}
 .container-portfolio{margin:0 12px}
@@ -284,10 +282,6 @@ footer ul a{text-decoration:none;color:#3c4858;text-transform:uppercase;font-siz
 }
 .container-portfolio .list ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .container-portfolio .list ul li{font-size:10px;font-weight:500;color:#fff;background-color:#9c27b0;border:5px;height:21px;text-transform:uppercase;margin:0 5px;margin-bottom:40px;border-radius:10px;padding:5px 10px}
-.btn-contact-lp{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.btn-contact-lp a{text-decoration:none}
-.btn-contact-lp button{color:#fff;font-size:12px;font-weight:400;width:150px;height:40px;background-color:#9c27b0;text-transform:uppercase;cursor:pointer;border-radius:5px;border:none;-webkit-filter:drop-shadow(0 4px 4px rgba(0, 0, 0, .251));filter:drop-shadow(0 4px 4px rgba(0, 0, 0, .251))}
-.btn-contact-lp button:hover{-webkit-transform:scale(1.1);transform:scale(1.1)}
 *{-webkit-box-sizing:border-box;box-sizing:border-box}
 body,html{width:100%}
 body{width:100%;color:#000;font-family:Roboto,sans-serif,Arial;background:#e5e5e5}

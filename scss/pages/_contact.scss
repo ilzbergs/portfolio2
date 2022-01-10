@@ -59,6 +59,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 50px;
+      @media screen and (min-width: 426px) {
+        margin-bottom: 60px;
+      }
+      @media screen and (min-width: 769px) {
+       margin-bottom: 90px;
+      }
 
       .input-text {
         width: 100%;
@@ -108,33 +115,7 @@
         border-left-style: hidden;
         line-height: 13px;
         resize: none;
-      }
-      button {
-        color: white;
-        font-size: 12px;
-        font-weight: 400;
-        width: 150px;
-        height: 40px;
-        background-color: #9c27b0;
-        text-transform: uppercase;
-        cursor: pointer;
-        border-radius: 5px;
-        border: none;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
-        cursor: pointer;
-        display: block;
-        margin-top: 40px;
-        margin-bottom: 50px;
-        @media screen and (min-width: 426px) {
-          margin-bottom: 60px;
-        }
-        @media screen and (min-width: 769px) {
-          margin-top: 30px;
-          margin-bottom: 90px;
-        }
-      }
-      button:hover{
-        transform: scale(1.1);
+        margin-bottom: 40px;
       }
     }
   }

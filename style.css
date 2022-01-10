@@ -132,6 +132,8 @@ header .menu-row .menu nav ul li i {
   content: '\f381';
   font-weight: 900;
   margin-right: 5px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 header .menu-row .menu nav ul li a {
   text-decoration: none;
@@ -181,6 +183,8 @@ header .menu-row .menu .logo-bars .dropdown-content a {
   text-align: center;
   text-transform: uppercase;
   padding: 10px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 header .menu-row .menu .logo-bars .media {
   display: -webkit-box;
@@ -871,6 +875,17 @@ footer ul a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 426px) {
+  .contact-container .wrapper-contact form {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .contact-container .wrapper-contact form {
+    margin-bottom: 90px;
+  }
 }
 .contact-container .wrapper-contact form .input-text {
   width: 100%;
@@ -925,39 +940,7 @@ footer ul a {
   border-left-style: hidden;
   line-height: 13px;
   resize: none;
-}
-.contact-container .wrapper-contact form button {
-  color: white;
-  font-size: 12px;
-  font-weight: 400;
-  width: 150px;
-  height: 40px;
-  background-color: #9c27b0;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 5px;
-  border: none;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
-  cursor: pointer;
-  display: block;
-  margin-top: 40px;
-  margin-bottom: 50px;
-}
-@media screen and (min-width: 426px) {
-  .contact-container .wrapper-contact form button {
-    margin-bottom: 60px;
-  }
-}
-@media screen and (min-width: 769px) {
-  .contact-container .wrapper-contact form button {
-    margin-top: 30px;
-    margin-bottom: 90px;
-  }
-}
-.contact-container .wrapper-contact form button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  margin-bottom: 40px;
 }
 
 .portfolio {
@@ -1079,39 +1062,6 @@ footer ul a {
   margin-bottom: 40px;
   border-radius: 10px;
   padding: 5px 10px;
-}
-
-.btn-contact-lp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.btn-contact-lp a {
-  text-decoration: none;
-}
-.btn-contact-lp button {
-  color: white;
-  font-size: 12px;
-  font-weight: 400;
-  width: 150px;
-  height: 40px;
-  background-color: #9c27b0;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 5px;
-  border: none;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.251));
-}
-.btn-contact-lp button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 * {
