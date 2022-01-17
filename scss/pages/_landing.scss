@@ -526,6 +526,21 @@ main {
                 height: 222px;
               }
             }
+            .bcgpicture1 {
+              background-image: url(/template/images/calculator.png);
+              width: 353px;
+              height: 222px;
+              background-size: cover;
+              background-repeat: no-repeat;
+              @media screen and (min-width: 426px) {
+                width: 342px;
+                height: 222px;
+              }
+              @media screen and (min-width: 769px) {
+                width: 364px;
+                height: 222px;
+              }
+            }
 
             .job-name {
               color: $greyColor;
