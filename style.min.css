@@ -179,7 +179,7 @@ main .container .job-container .row .job-block .job .bcgpicture{width:342px;heig
 @media screen and (min-width:769px){
 main .container .job-container .row .job-block .job .bcgpicture{width:364px;height:222px}
 }
-main .container .job-container .row .job-block .job .bcgpicture1{background-image:url(/template/images/calculator.png);width:353px;height:222px;background-size:cover;background-repeat:no-repeat}
+main .container .job-container .row .job-block .job .bcgpicture1{background-image:url(template/images/calculator.png);width:353px;height:222px;background-size:cover;background-repeat:no-repeat}
 @media screen and (min-width:426px){
 main .container .job-container .row .job-block .job .bcgpicture1{width:342px;height:222px}
 }
