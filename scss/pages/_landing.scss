@@ -277,7 +277,7 @@ main {
       display: flex;
       justify-content: center;
       .text-block-image {
-        background-image: url(template/images/text-block.jpg);
+        background-image: url(template/images/profile-picture.jpg);
         height: 418px;
         width: 320px;
         background-repeat: no-repeat;
@@ -335,7 +335,7 @@ main {
           color: $lightGrey;
           font-weight: 300;
           font-size: 16px;
-          line-height: 19px;
+          line-height: 25px;
           margin: 0 12px;
           margin-top: 20px;
           @media screen and (min-width: 426px) {

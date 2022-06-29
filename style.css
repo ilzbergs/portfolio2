@@ -260,7 +260,7 @@ main .container {
     display: flex;
     justify-content: center; }
     main .container .text-block-wrapper .text-block-image {
-      background-image: url(template/images/text-block.jpg);
+      background-image: url(template/images/profile-picture.jpg);
       height: 418px;
       width: 320px;
       background-repeat: no-repeat;
@@ -309,7 +309,7 @@ main .container {
         color: #999999;
         font-weight: 300;
         font-size: 16px;
-        line-height: 19px;
+        line-height: 25px;
         margin: 0 12px;
         margin-top: 20px; }
         @media screen and (min-width: 426px) {
